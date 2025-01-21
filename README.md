@@ -4,7 +4,7 @@
 This repository hosts the ongoing development of a Fantasy Premier League (FPL) web application, crafted for integration with Voxbet's suite of innovative tools. The primary goal of this project is to provide users with a seamless and dynamic experience by leveraging advanced backend architecture and real-time data from the FPL API.
 
 ### Key Features
-- **Dynamic User Input System**: Users input their team name and full name directly on the homepage. These inputs are used to dynamically query relevant data from the proprietary backend.
+- **Dynamic User Input System**: Users input their team name and full name directly on the homepage. These inputs are used to dynamically query relevant data from the backend.
 - **Proprietary API**: Built using AWS, this custom API points to a Lambda function that queries an internal database to retrieve a unique player ID based on user-provided information. This player ID is then used to fetch team-specific data from the FPL API.
 - **Sophisticated Backend**: The application integrates multiple layers of logic to ensure accurate retrieval of player-specific data, without relying on dropdown menus or static lists.
 - **AWS Integration**: Utilizes AWS Lambda for efficient, serverless computations, ensuring scalability and reduced latency when querying databases and APIs.
