@@ -12,7 +12,7 @@ const AWS_API_URL = "https://o03qkazcel.execute-api.eu-west-1.amazonaws.com/$def
 
 // -------------------------------------------------------------------
 //  1) getPlayerIdByTeamNameAndFullName(teamName, fullName)
-//     => Calls your AWS Lambda to find the player's FPL entry ID
+//     => Calls AWS Lambda to find the player's FPL entry ID
 // -------------------------------------------------------------------
 export async function getPlayerIdByTeamNameAndFullName(teamName, fullName) {
     console.log("[Backend] Calling AWS API to fetch Player ID...");
