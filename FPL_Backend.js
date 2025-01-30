@@ -8,7 +8,7 @@ import wixData from 'wix-data';
 // ------------------------------------------------------
 // AWS API URL - DO NOT CHANGE
 // ------------------------------------------------------
-const AWS_API_URL = "https://o03qkazcel.execute-api.eu-west-1.amazonaws.com/$default/FPLHandler";
+const AWS_API_URL = "CLASSIFIED ADDRESS";
 
 // -------------------------------------------------------------------
 //  1) getPlayerIdByTeamNameAndFullName(teamName, fullName)
