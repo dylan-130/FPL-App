@@ -141,8 +141,11 @@ body {
 }
 
 .connect-page {
-  padding: 2rem;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section {
@@ -159,9 +162,22 @@ section {
   gap: 2rem;
 }
 
+section {
+  margin-bottom: 1.4rem;
+}
+
 .goalkeeper {
+  margin-top: 50px;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.bench {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 2rem;
 }
 
 .player-card {
@@ -169,13 +185,31 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
+  gap: 0px;
   padding: 1rem;
+  width: 120px;
 }
 
+.player-card div,
+.player-card span {
+  margin-bottom: 1;
+}
+
+.player-card p {
+  margin: 1;
+  padding: 0;
+  line-height: 0.9;
+}
+
+
 .circle-icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: white;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
   margin-bottom: 0.5rem;
 }
