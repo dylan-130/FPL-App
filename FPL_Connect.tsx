@@ -10,6 +10,8 @@ const Connect = () => {
     <>
       <Navbar />
       <div className="connect-page">
+
+        
         <section className="goalkeeper">
           <PlayerCard name="Goalkeeper" points={10} />
         </section>
@@ -40,6 +42,27 @@ const Connect = () => {
               points={3 + i}
             />
           ))}
+        </section>
+      </div>
+
+      {/* Bottom-right buttons */}
+      <div className="bottom-right-buttons">
+        <Button 
+          label="Confirm & Get Bet-Builder" 
+          onClick={() => console.log('Confirm clicked')} 
+          className="confirm-button" 
+        />
+        <Button 
+          label="Cancel" 
+          onClick={() => console.log('Cancel clicked')} 
+          className="cancel-button" 
+        />
+      </div>
+    </>
+  );
+};
+
+export default Connect;
         </section>
       </div>
     </>
