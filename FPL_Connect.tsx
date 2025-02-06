@@ -1,18 +1,9 @@
-import Navbar from '../Components/Navbar';
-import '../App.css';
-
-const PlayerCard = ({ name, club, points, isCaptain, isViceCaptain }: any) => {
-  return (
-    <div className="player-card">
-      <div className="circle-icon"></div>
-      <p>{name}</p>
-      <p>{club}</p>
-      <p>{points} pts</p>
-      {isCaptain && <span className="captain-icon">C</span>}
-      {isViceCaptain && <span className="vice-captain-icon">V</span>}
-    </div>
-  );
-};
+import Navbar from '../Components/Navbar/Navbar';
+import '../styles/Global.css';
+import '../Components/Navbar/Navbar.css';
+import '../styles/Connect.css';
+import PlayerCard from '../Components/PlayerCard/PlayerCard';
+import Button from '../Components/Button/Button'
 
 const Connect = () => {
   return (
@@ -20,24 +11,24 @@ const Connect = () => {
       <Navbar />
       <div className="connect-page">
         <section className="goalkeeper">
-          <PlayerCard name="Goalkeeper" club="Club Name" points={10} />
+          <PlayerCard name="Goalkeeper" points={10} />
         </section>
 
         <section className="defenders">
           {[...Array(5)].map((_, i) => (
-            <PlayerCard key={i} name={`Defender ${i + 1}`} club="Club Name" points={10} />
+            <PlayerCard key={i} name={`Defenders ${i + 1}`} points={10} />
           ))}
         </section>
 
         <section className="midfielders">
           {[...Array(5)].map((_, i) => (
-            <PlayerCard key={i} name={`Midfielder ${i + 1}`} club="Club Name" points={8} />
+            <PlayerCard key={i} name={`Midfielders ${i + 1}`} points={8} />
           ))}
         </section>
 
         <section className="forwards">
           {[...Array(3)].map((_, i) => (
-            <PlayerCard key={i} name={`Forward ${i + 1}`} club="Club Name" points={12} />
+            <PlayerCard key={i} name={`Calvert-Lewin ${i + 1}`} points={12} />
           ))}
         </section>
 
@@ -45,8 +36,7 @@ const Connect = () => {
           {[...Array(5)].map((_, i) => (
             <PlayerCard
               key={i}
-              name={`Sub ${i + 1}`}
-              club="Club Name"
+              name={`Substitutions ${i + 1}`}
               points={3 + i}
             />
           ))}
@@ -55,5 +45,7 @@ const Connect = () => {
     </>
   );
 };
+
+export default Connect;
 
 export default Connect;
