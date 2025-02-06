@@ -63,12 +63,3 @@ const Connect = () => {
 };
 
 export default Connect;
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default Connect;
-
-export default Connect;
