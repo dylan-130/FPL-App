@@ -1,18 +1,25 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <nav className="navbar">
-      <div className="navbar-logo">FPL Pulse</div>
-      <div className="navbar-links">
-        <a onClick={() => navigate('/')}>Home</a>
-        <a onClick={() => navigate('/connect')}>Connect</a>
-      </div>
-    </nav>
-  );
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    return (
+        <nav className="navbar">
+            <div className="navbar-logo">FPL Pulse</div>
+            <div className="hamburger-menu" onClick={toggleMenu}>
+                ☰
+            </div>
+            <div className={`navbar-links ${isMenuOpen ? 'show' : 'hide'}`}>
+                <a href="/">Home</a>
+                <a href="/connect">Connect</a>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
