@@ -265,3 +265,115 @@
         margin: 0 auto;
     }
 }
+
+/* For iPhone XR */
+@media (max-width: 414px) {
+
+    .bottom-right-buttons {
+        position: absolute; /* Position buttons in the container */
+        bottom: 2rem; /* Add space from bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+        gap: 0.5rem; /* Reduce gap between buttons */
+    }
+
+    .confirm-button, 
+    .cancel-button {
+        font-size: 0.65rem; /* Smaller button text */
+        padding: 0.3rem 1rem; /* Adjust padding */
+        max-width: 120px; /* Prevent overlap */
+    }
+}
+
+/* For iPhone 12 */
+@media (max-width: 390px) {
+    .team-info {
+        font-size: 0.75rem; /* Slightly smaller text */
+        top: 7rem;
+        left: 1rem;
+    }
+
+    .player-card {
+        font-size: 0.5rem; /* Smaller font */
+        width: 38px; /* Slightly narrower cards */
+    }
+
+    .forwards {
+        display: flex;
+        justify-content: space-between; /* Ensure alignment */
+        gap: 0.5rem; /* Reduce gap to fit smaller screens */
+        width: 60%; /* Adjust width */
+        margin: 0 auto;
+    }
+
+    .bench {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 0.3rem; /* Reduce gap for better alignment */
+    }
+
+    .bottom-right-buttons {
+        position: absolute; /* Position buttons in the container */
+        bottom: 2rem; /* Add space from bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+        gap: 0.5rem; /* Reduce gap between buttons */
+    }
+
+    .confirm-button, 
+    .cancel-button {
+        font-size: 0.6rem; /* Smaller button text */
+        padding: 0.3rem 1rem; /* Adjust padding */
+        max-width: 120px; /* Prevent overlap */
+    }
+}
+
+/* For iPhone SE */
+@media (max-width: 375px) {
+    .team-info {
+        font-size: 0.75rem; /* Slightly smaller text */
+        top: 7rem;
+        left: 1rem;
+    }
+
+    .player-card {
+        font-size: 0.2rem; /* Smaller font */
+        width: 38px; /* Slightly narrower cards */
+    }
+
+    .forwards {
+        display: flex;
+        justify-content: space-between; /* Ensure alignment */
+        gap: 0.5rem; /* Reduce gap to fit smaller screens */
+        width: 60%; /* Adjust width */
+        margin: 0 auto;
+    }
+
+    .bench {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 0.3rem; /* Reduce gap for better alignment */
+    }
+
+    .bottom-right-buttons {
+        position: absolute; /* Position buttons in the container */
+        bottom: 1rem; /* Add space from bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+        gap: 0.5rem; /* Reduce gap between buttons */
+    }
+
+    .confirm-button, 
+    .cancel-button {
+        font-size: 0.5rem; /* Smaller button text */
+        padding: 0.2rem 1rem; /* Adjust padding */
+        max-width: 120px; /* Prevent overlap */
+    }
+}
+
+/* For Galaxy S8+ */
+@media (max-width: 360px) {
+
+    .player-card {
+        font-size: 0.35rem; /* Smaller font */
+        width: 38px; /* Slightly narrower cards */
+    }
+}
