@@ -1,0 +1,216 @@
+/* Connect.css */
+
+/* Outer container that holds navbar + main content */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;         /* Fill the entire viewport height */
+    overflow: hidden;      /* We'll let the .connect-page handle scrolling */
+  }
+
+.connect-page {
+    padding-top: 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box; /*include padding in height calculation */
+  }
+
+/* Position the team info at the top-left corner */
+.team-info {
+    position: fixed;
+    top: 6rem;  /* Increase this value to move everything down */
+    left: 2rem; /* Adjust as needed */
+    color: white;  /* Ensure text is readable */
+    text-align: left;  /* Left align the text */
+  }
+  
+  /* Bold text for Team Name and Game Week */
+  .team-name, .game-week {
+    font-weight: bold;
+    font-size: 1.4rem; /* Increased font size */
+  }
+  
+  /* Normal text for Team Manager and Points */
+  .team-manager, .points {
+    font-weight: normal;
+    font-size: 1.2rem; /* Increased font size */
+  }
+  
+  /* Add spacing between each line */
+  .team-name, .team-manager, .game-week, .points {
+    margin-bottom: 0.5rem;
+  }
+
+  .team-manager {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Player name and points adjustments */
+  .player-card-name, .player-card-points {
+    font-size: 1.1rem;  /* Increase player name size */
+  }
+  
+  .player-card-points {
+    font-size: 1.1rem;  /* Increase points size */
+  }
+  
+  /* Add general styling for PlayerCard to manage font sizes */
+  .player-card {
+    font-size: 1rem;  /* Default player card font size */
+  }
+  
+  /* Team Layout */
+  .goalkeeper,
+  .defenders,
+  .midfielders,
+  .forwards,
+  .bench {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .goalkeeper {
+    margin-top: -0.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  .bench {
+    display: flex;
+    justify-content: flex-start; /* Align substitutes to the left */
+    gap: 2rem; /* Space between substitutes */
+    margin-top: 2rem; /* Ensure they appear below the main layout */
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjust goalkeeper position */
+    .goalkeeper {
+      margin-top: -8rem; /* Bring the goalkeeper closer to the top */
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* Optimize spacing for defenders, midfielders, and forwards */
+    .defenders,
+    .midfielders,
+    .forwards {
+      margin-bottom: 0.3rem; /* Reduce vertical spacing */
+      gap: 0.5rem; /* Reduce horizontal spacing */
+    }
+  
+    /* Allow bench players to wrap and reduce spacing */
+    .bench {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      justify-content: center; /* Center the bench players */
+    }
+  
+    /* Team info adjustments for smaller screens */
+    .team-info {
+      position: static; /* Remove fixed positioning */
+      width: 100%; /* Take up full width */
+      text-align: center; /* Center-align text */
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  
+    /* Player card adjustments */
+    .player-card {
+      font-size: 0.75rem; /* Shrink font size */
+      width: 45px; /* Reduce card size */
+    }
+  
+    /* Connect page adjustments */
+    .connect-page {
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 80px; /* Allow room for buttons */
+    }
+  
+    /* Buttons styling and repositioning */
+    .bottom-right-buttons {
+      position: static;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem; /* Reduce gap for smaller screens */
+      margin-top: 1rem; /* Add spacing from the team layout */
+    }
+  
+    .confirm-button,
+    .cancel-button {
+      padding: 0.5rem 1.5rem; /* Reduce button padding */
+      font-size: 0.85rem; /* Reduce font size */
+      max-width: 150px; /* Ensure buttons are compact */
+      min-width: 100px; /* Prevent buttons from shrinking too much */
+    }
+  
+    /* Prevent text wrapping */
+    .player-card p {
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Ensure content doesn't overflow */
+      text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    }
+  
+    /* Navbar adjustments for smaller screens */
+    .navbar {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
+      padding: 1rem; /* Reduce padding */
+    }
+  
+    .navbar-logo {
+      font-size: 1rem; /* Reduce logo size */
+    }
+  
+    .hamburger-menu {
+      align-self: flex-end; /* Move hamburger to the right */
+      margin-bottom: 0.5rem;
+    }
+  
+    .navbar-links {
+      display: none; /* Keep links hidden until hamburger is pressed */
+    }
+  
+    .navbar-links.show {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further reduce spacing and sizes for extra-small screens */
+    .goalkeeper {
+      margin-top: -6rem;
+    }
+  
+    .player-card {
+      font-size: 0.65rem;
+      width: 40px;
+    }
+  
+    .team-info {
+      font-size: 0.8rem;
+    }
+  
+    .bottom-right-buttons {
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+    }
+  
+    .confirm-button,
+    .cancel-button {
+      font-size: 0.75rem;
+      padding: 0.4rem 1rem;
+      max-width: 120px;
+      min-width: 80px;
+    }
+  }
