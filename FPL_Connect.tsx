@@ -3,15 +3,22 @@ import '../styles/Global.css';
 import '../Components/Navbar/Navbar.css';
 import '../styles/Connect.css';
 import PlayerCard from '../Components/PlayerCard/PlayerCard';
-import Button from '../Components/Button/Button'
+import Button from '../Components/Button/Button';
 
 const Connect = () => {
   return (
     <>
       <Navbar />
       <div className="connect-page">
-
         
+        {/* Team Info at the top-left */}
+        <div className="team-info">
+          <div className="team-name">Team Name</div>
+          <div className="team-manager">Dylan Byrne</div>
+          <div className="game-week">GW 20</div>
+          <div className="points">Points: 54</div>
+        </div>
+
         <section className="goalkeeper">
           <PlayerCard name="Goalkeeper" points={10} />
         </section>
