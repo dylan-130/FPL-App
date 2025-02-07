@@ -1,34 +1,129 @@
-/* Navbar.css */
-
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2rem;
-    background: linear-gradient(90deg, #1A237E, #6A1B9A);
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  background: linear-gradient(90deg, #1A237E, #6A1B9A);
+  z-index: 1000;
+  position: relative;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navbar Links (Desktop) */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.navbar-hidden {
+  display: none;
+}
+
+.navbar-open {
+  display: flex;
+  flex-direction: column;
+  background: #1A237E; /* Adjust as needed */
+}
+
+.hamburger-menu {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+      display: block; /* Show on mobile */
   }
-  
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+}
+
+.navbar-links.show {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  top: 4rem; /* Adjust to avoid overlap */
+  right: 0;
+  width: 100%;
+  background: #1A237E;
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-links.hide {
+  display: none;
+}
+
+/* Hamburger Button (Hidden by Default) */
+.hamburger-button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1001; /* Ensure it's above everything */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
   .navbar-links {
-    display: flex;
-    gap: 2rem;
+    display: none; /* Hide links on mobile */
   }
-  
-  .navbar-links a {
+
+  .hamburger-button {
+    display: block; /* Show hamburger button */
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 0;
+    background: #1A237E;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .mobile-menu a {
     text-decoration: none;
     color: white;
     font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
     cursor: pointer;
   }
-  
-  .navbar-links a:hover {
-    text-decoration: underline;
+
+  .mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
+}
