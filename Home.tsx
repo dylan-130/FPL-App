@@ -1,6 +1,11 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
+import '../styles/Global.css';
+import '../Components/Navbar/Navbar.css';
+import '../styles/Home.css';
+import '../styles/SignIn.css';
+import Button from '../Components/Button/Button';
 
 function App() {
   const signInRef = useRef<HTMLDivElement>(null);
@@ -11,11 +16,6 @@ function App() {
   const scrollToSignIn = () => {
     signInRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  // Smooth scroll to landing section
-  const scrollToLanding = () => {
-    landingRef.current?.scrollIntoView({ behavior: 'smooth'})
-  }
 
   // Navigate to Connect page
   const handleConnect = (e: React.FormEvent) => {
@@ -29,7 +29,7 @@ function App() {
       <nav className="navbar">
         <div className="navbar-logo">FPL Pulse</div>
         <div className="navbar-links">
-          <a onClick={scrollToLanding}>Home</a>
+          <Link to='/'>Home</Link>
           <a onClick={scrollToSignIn}>Connect</a>
         </div>
       </nav>
@@ -39,9 +39,11 @@ function App() {
         <div className="hero-content">
           <p className="hero-subtitle">It's almost time</p>
           <h1 className="hero-title">FPL Betting, Re‑Imagined!</h1>
-          <button className="hero-button" onClick={scrollToSignIn}>
-            Get Started
-          </button>
+          <Button 
+            label="Get Started" 
+            onClick={scrollToSignIn} 
+            className="hero-button" 
+        />
         </div>
       </section>
 
@@ -65,9 +67,12 @@ function App() {
               placeholder="Enter your full name"
             />
           </div>
-          <button type="submit" className="connect-button">
-            Connect
-          </button>
+          <Button 
+            label="Connect" 
+            onClick={handleConnect} 
+            type="submit" 
+            className="connect-button" 
+        />
         </form>
       </section>
     </>
