@@ -1,0 +1,74 @@
+/* PlayerCard.css */
+
+.player-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 1rem;
+    width: 120px;
+  }
+  
+  .player-card div,
+  .player-card span {
+    margin-bottom: 1;
+  }
+  
+  .player-card p {
+    margin: 1;
+    padding: 0;
+    line-height: 0.9;
+  }
+  
+  .circle-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .sub-on-icon {
+    position: absolute;
+    font-size: 3rem; /* Adjust size */
+    color: green; /* Set arrow color to green */
+    transform: rotate(180deg); /* No rotation */
+    left: 25px; /* Place to the right of the player icon */
+    top: -15px;
+  }
+  
+  .sub-off-icon {
+    position: absolute;
+    font-size: 3rem; /* Adjust size */
+    color: red; /* Set arrow color to red */
+    transform: rotate(0deg); /* Rotate for visual distinction */
+    left: 45px; /* Place to the right of the player icon */
+    top: 15px;
+  }
+
+/* Style for Captain Icon */
+.captain-icon {
+  position: absolute;
+  font-size: 1rem; /* Adjust the size of the "C" */
+  font-weight: bold; /* Make it bold */
+  color: gold; /* Gold color to highlight the captain */
+  margin-right: 0.2rem; /* Add spacing if needed */
+  top: 5px; /* Adjust based on your design */
+  right: 45px
+}
+
+/* Style for Vice-Captain Icon */
+.vice-captain-icon {
+  position: absolute;
+  font-size: 1rem; /* Adjust the size of the "V" */
+  font-weight: bold; /* Make it bold */
+  color: silver; /* Silver color to highlight the vice-captain */
+  margin-left: 0.2rem; /* Add spacing if needed */
+  top: 5px; /* Adjust based on your design */
+  right: 45px
+}
